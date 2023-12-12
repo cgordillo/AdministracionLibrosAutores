@@ -1,0 +1,263 @@
+{
+	"info": {
+		"_postman_id": "876f6fd1-a975-46b0-b497-81a5c2a8ec14",
+		"name": "Administracion de Libros y Autores",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3766802"
+	},
+	"item": [
+		{
+			"name": "1. Administracion Autores",
+			"item": [
+				{
+					"name": "1. CrearAutor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombres\": \"Cesar\",\r\n    \"apellidos\": \"Gordillo Gomez\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/AdministracionAutores/V1.0/crearAutor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"AdministracionAutores",
+								"V1.0",
+								"crearAutor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2. ConsultarAutores",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/AdministracionAutores/V1.0/consultarAutor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"AdministracionAutores",
+								"V1.0",
+								"consultarAutor"
+							],
+							"query": [
+								{
+									"key": "idAutor",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3. ActualizarAutor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idAutor\":1,\r\n    \"nombres\": \"prueba\",\r\n    \"apellidos\": \"Gordillo Gomez\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/AdministracionAutores/V1.0/actualizarAutor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"AdministracionAutores",
+								"V1.0",
+								"actualizarAutor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4. EliminarAutor",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/AdministracionAutores/V1.0/eliminarAutor?idAutor=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"AdministracionAutores",
+								"V1.0",
+								"eliminarAutor"
+							],
+							"query": [
+								{
+									"key": "idAutor",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "2. Administracion Libros",
+			"item": [
+				{
+					"name": "1. CrearLibro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"sol\",\r\n    \"editorial\": \"Norma\",\r\n    \"cantidadPaginas\": 400,\r\n    \"precio\": 20000,\r\n    \"fechaPublicacion\": \"2023-05-12\",\r\n    \"idAutor\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/AdministracionLibros/V1.0/crearLibro",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"AdministracionLibros",
+								"V1.0",
+								"crearLibro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2. ConsultarLibros",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/AdministracionLibros/V1.0/consultarLibro",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"AdministracionLibros",
+								"V1.0",
+								"consultarLibro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3. ActualizarLibro",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idLibro\":1,\r\n    \"titulo\": \"solecito\",\r\n    \"editorial\": \"Norma\",\r\n    \"cantidadPaginas\": 400,\r\n    \"precio\": 20000,\r\n    \"fechaPublicacion\": \"2023-05-12\",\r\n    \"idAutor\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/AdministracionLibros/V1.0/actualizarLibro",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"AdministracionLibros",
+								"V1.0",
+								"actualizarLibro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4. EliminarLibro",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/AdministracionLibros/V1.0/eliminarLibro?idLibro=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"AdministracionLibros",
+								"V1.0",
+								"eliminarLibro"
+							],
+							"query": [
+								{
+									"key": "idLibro",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
