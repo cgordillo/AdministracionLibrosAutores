@@ -1,4 +1,4 @@
-# Instruccionees
+# Instrucciones
 
 ### Ambiente local
 
@@ -42,4 +42,16 @@ Crear autores y verificar el CRUD del API de estos
 ```
 Crear libros teniendo en cuenta el idAutor asociado
 Continuar con la verificación de CRUD teniendo en cuenta el idLibro y idAutor asociados
+```
+
+### DEMO y prueba de ejecución
+```
+Ruta donde se encuentran
+  - Modelo E-R de la solución
+  - Proyecto Postman
+  - Imagen Docker (archivo tar)
+  - Jar de ejecución si se requiere
+
+https://drive.google.com/drive/folders/1LPsNPH-ULdm32daX2uxs2gPJMCEpEpK2?usp=drive_link
+
 ```
